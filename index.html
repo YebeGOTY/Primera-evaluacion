@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KameHouse - Veterinaria a Domicilio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <ul>
+            <img src="logos/logokamehouse.jpg" alt="Logo KameHouse">
+        </ul>
+        <h1>KameHouse</h1>
+        <p>Veterinaria a Domicilio</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#galeria">Galería</a>
+        <a href="https://api.whatsapp.com/send/?phone=%2B584127926222&text&type=phone_number&app_absent=0">Contacto</a>
+    </nav>
+
+    <section class="hero" id="inicio">
+        <h2>Llevamos la consulta veterinaria hasta tu hogar</h2>
+        <h3>Para una mayor tranquilidad y cuidado de su mascota</h3>
+        <a href="#solicitud" class="btn">Solicitar Visita</a>
+    </section>
+
+    <section class="services" id="servicios">
+        <h2>Nuestros Servicios</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Vacunación</h3>
+                <p>La vacunación es fundamental para la salud de tu mascota</p>
+            </div>
+            <div class="service-card">
+                <h3>Consultas</h3>
+                <p>Recibe atención veterinaria profesional y personalizada en la comodidad de tu casa</p>
+            </div>
+            <div class="service-card">
+                <h3>Emergencias</h3>
+                <p>En momentos críticos, confía en nuestra respuesta rápida y profesional para emergencias veterinarias</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-container" id="galeria">
+        <h2>Nuestros primeros pacientes</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="pacientes/pacientenumero1y2.jpg" alt="Chequeo general para paciente 1 y 2" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+                <img src="pacientes/pacientenumero3.jpg" alt="Intervención quirúrgica" class="gallery-image">
+            </div>
+                <div class="gallery-item">
+                    <img src="pacientes/pacientenumero4y5.jpg" alt="vacunacion y vitaminas para paciente 4 y 5" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="pacientes/pacientenumero6.jpg" alt="vacunación" class="gallery-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="form-container" id="solicitud">
+        <h2>Solicitud de Visita</h2>
+        <form>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="nombre">Nombre del Dueño:</label>
+                    <input type="text" id="nombre" required>
+                </div>
+                </div>
+                <div class="form-group">
+                    <label for="cedula">Cedula de Identidad:</label>
+                    <input type="number" id="number"required>
+                </div>
+                <div class="form-group">
+                    <label for="casa">Dirección</label>
+                    <input type="mensaje" required>
+                </div>
+                <div class="form-group">
+                    <label for="fecha">Fecha de consulta</label>
+                    <input type="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="hora">Hora de consulta</label>
+                    <input type="time" required>
+                </div>
+                <div class="form-group">
+                    <label for="mascota">Tipo de Mascota:</label>
+                    <select id="mascota" required>
+                        <option value="">Seleccionar</option>
+                        <option>Perro</option>
+                        <option>Gato</option>
+                        <option>Loro</option>
+                        <option>Guacamaya</option>
+                        <option>Morrocoy</option>
+                        <option>Reptil</option>
+                        <option>Otro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Descripción del Problema:</label>
+                    <textarea id="mensaje" rows="4" required></textarea>
+                </div>
+            </div>
+            <button type="submit" class="btn">Enviar Solicitud</button>
+        </form>
+    </section>
+
+    <footer style="background: var(--text); color: white; padding: 2rem; text-align: center; margin-top: auto;">
+        <h3>Unete a la Comunidad de KameHouse</h3>
+        <a href="https://www.instagram.com/whois.yebe/">
+            <u>
+                <img src="logos/logoinstagram.avif" alt="Instagram">
+            </u>
+                <a href="https://www.facebook.com/share/1KeJ1Cfu3M/">
+            <u>
+                <img src="logos/logofacebook.png" alt="Facebook">
+            </u>
+                <a href="https://chat.whatsapp.com/LoJ4oclthLTJgXwlFK8kav">
+            <u>
+                <img src="logos/logowhatsapp.png" alt="Grupo de whatsapp">
+            </u>
+        </a>
+        <p>© 2024 KameHouse Veterinaria - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
