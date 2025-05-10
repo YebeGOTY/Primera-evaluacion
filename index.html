@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KameHouse - Veterinaria a Domicilio</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -25,7 +23,7 @@
     <section class="hero" id="inicio">
         <h2>Llevamos la consulta veterinaria hasta tu hogar</h2>
         <h3>Para una mayor tranquilidad y cuidado de su mascota</h3>
-        <a href="#solicitud" class="btn">Solicitar Visita</a>
+        <a href="/formularios/form.html" class="btn" id="solicitarVisitaBtn">Solicitar Visita</a>
     </section>
 
     <section class="services" id="servicios">
@@ -65,51 +63,26 @@
         </div>
     </section>
 
-    <section class="form-container" id="solicitud">
-        <h2>Solicitud de Visita</h2>
-        <form>
-            <div class="form-grid">
-                <div class="form-group">
-                    <label for="nombre">Nombre del Dueño:</label>
-                    <input type="text" id="nombre" required>
-                </div>
-                </div>
-                <div class="form-group">
-                    <label for="cedula">Cedula de Identidad:</label>
-                    <input type="number" id="number"required>
-                </div>
-                <div class="form-group">
-                    <label for="casa">Dirección</label>
-                    <input type="mensaje" required>
-                </div>
-                <div class="form-group">
-                    <label for="fecha">Fecha de consulta</label>
-                    <input type="date" required>
-                </div>
-                <div class="form-group">
-                    <label for="hora">Hora de consulta</label>
-                    <input type="time" required>
-                </div>
-                <div class="form-group">
-                    <label for="mascota">Tipo de Mascota:</label>
-                    <select id="mascota" required>
-                        <option value="">Seleccionar</option>
-                        <option>Perro</option>
-                        <option>Gato</option>
-                        <option>Loro</option>
-                        <option>Guacamaya</option>
-                        <option>Morrocoy</option>
-                        <option>Reptil</option>
-                        <option>Otro</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="mensaje">Descripción del Problema:</label>
-                    <textarea id="mensaje" rows="4" required></textarea>
-                </div>
+    <section class="advantages">
+        <h2>¿Por qué elegirnos?</h2>
+        <div class="advantages-grid">
+            <div class="advantage-card">
+                <h3>Comodidad</h3>
+                <p>Atendemos a tu mascota en la comodidad de tu hogar, evitando estrés innecesario.</p>
             </div>
-            <button type="submit" class="btn">Enviar Solicitud</button>
-        </form>
+            <div class="advantage-card">
+                <h3>Profesionalismo</h3>
+                <p>Contamos con veterinarios altamente capacitados y con experiencia.</p>
+            </div>
+            <div class="advantage-card">
+                <h3>Atención Personalizada</h3>
+                <p>Nos adaptamos a las necesidades específicas de cada mascota y dueño.</p>
+            </div>
+            <div class="advantage-card">
+                <h3>Disponibilidad</h3>
+                <p>Ofrecemos horarios flexibles para ajustarnos a tu rutina diaria.</p>
+            </div>
+        </div>
     </section>
 
     <footer style="background: var(--text); color: white; padding: 2rem; text-align: center; margin-top: auto;">
@@ -127,6 +100,9 @@
                 <img src="logos/logowhatsapp.png" alt="Grupo de whatsapp">
             </u>
         </a>
+    </footer>
+
+<script src="/ts/validacion.ts"></script>
         <p>© 2024 KameHouse Veterinaria - Todos los derechos reservados</p>
     </footer>
 </body>

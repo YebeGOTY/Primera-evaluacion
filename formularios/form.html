@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Pago</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Formulario de Contacto</h2>
+    <form action="/contact/add" method="POST">
+        <label for="email">Correo electrónico:</label>
+        <input type="email" name="email" required><br>
+        <label for="name">Nombres:</label>
+        <input type="text" name="name" required><br>
+        <label for="comment">Comentario:</label>
+        <textarea name="comment" required></textarea><br>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <h2>Formulario de Pago</h2>
+    <form action="/payment/add" method="POST">
+        <label for="email">Correo electrónico:</label>
+        <input type="email" name="email" required><br>
+        <label for="card_holder_name">Titular de la tarjeta:</label>
+        <input type="text" name="card_holder_name" required><br>
+        <label for="card_number">Número de tarjeta:</label>
+        <input type="text" name="card_number" required><br>
+        <label for="expiration_month">Mes de expiración:</label>
+        <input type="text" name="expiration_month" required><br>
+        <label for="expiration_year">Año de expiración:</label>
+        <input type="text" name="expiration_year" required><br>
+        <label for="cvv">Código de seguridad (CVV):</label>
+        <input type="text" name="cvv" required><br>
+        <label for="amount">Monto a pagar:</label>
+        <input type="number" name="amount" required><br>
+        <label for="currency">Moneda:</label>
+        <input type="text" name="currency" required><br>
+        <input type="submit" value="Realizar Pago">
+    </form>
+
+<div id="factura" style="display:none; background:white; padding:2rem; margin-top:2rem; border-radius:12px; max-width:500px; box-shadow:0 4px 6px rgba(0,0,0,0.1);">
+    <h2>Factura</h2>
+    <p id="factura-content"></p>
+</div>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
