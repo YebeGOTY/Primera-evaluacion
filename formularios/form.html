@@ -8,20 +8,19 @@
 <body>
     <h2>Formulario de Contacto</h2>
     <form action="https://formsubmit.co/yeibertveliz10@gmail.com" method="POST">
-        <label for="email">Correo electrónico:</label>
-        <input type="email" name="email" required><br>
+        <label for="email1">Correo electrónico:</label>
+        <input type="email" name="email" id="email1" required><br>
         <label for="name">Nombres:</label>
         <input type="text" name="name" required><br>
         <label for="comment">Comentario:</label>
         <textarea name="comment" required></textarea><br>
-
         <input type="submit" value="Enviar">
     </form>
 
     <h2>Formulario de Pago</h2>
-    <form action="https://formsubmit.co/yeibertveliz10@gmail.com" method="POST">
-        <label for="email">Correo electrónico:</label>
-        <input type="email" name="email" required><br>
+    <form id="paymentForm" action="https://formsubmit.co/programacion2ais@yopmail.com" method="POST">
+        <label for="email2">Correo electrónico:</label>
+        <input type="email" name="email" id="email2" required><br>
         <label for="card_holder_name">Titular de la tarjeta:</label>
         <input type="text" name="card_holder_name" required><br>
         <label for="card_number">Número de tarjeta:</label>
@@ -36,14 +35,30 @@
         <input type="number" name="amount" required><br>
         <label for="currency">Moneda:</label>
         <input type="text" name="currency" required><br>
-            <div class="mb-3">
-                <div class="g-recaptcha" data-sitekey="6LetXUYrAAAAALJCRFkKtz-D0dgZpKc3TaoX0pL3"></div>
-            </div>
+        <div class="g-recaptcha" data-sitekey="6LetXUYrAAAAALJCRFkKtz-D0dgZpKc3TaoX0pL3"></div>
         <input type="submit" value="Realizar Pago">
+
+    <input type="hidden" name="_cc" value="yeibertveliz10@gmail.com"> 
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://tudominio.com/confirmacion.html">
     </form>
 
-<script src="script.js"></script>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+    document.getElementById('paymentForm').addEventListener('submit', function(e) {
+        if (typeof grecaptcha !== "undefined") {
+            var response = grecaptcha.getResponse();
+            if(response.length == 0) {
+                alert('Por favor, completa el reCAPTCHA.');
+                e.preventDefault();
+                return false;
+            }
+        } else {
+            alert('No se pudo cargar reCAPTCHA. Intenta recargar la página.');
+            e.preventDefault();
+            return false;
+        }
+    });
+    </script>
 </body>
 </html>
